@@ -1,6 +1,8 @@
 import { h, Component } from 'preact';
 import { Link, Match } from 'preact-router/match';
 import firebase from '../firebase';
+import { GoogleAuthProvider } from "firebase/auth";
+
 import Drawer from 'preact-material-components/Drawer';
 import TopAppBar from 'preact-material-components/TopAppBar';
 import Dialog from 'preact-material-components/Dialog';
@@ -25,12 +27,12 @@ export default class NavBar extends Component {
 	openDrawer = () => this.setState({ drawerOpened: !this.state.drawerOpened });
 
 	signIn = () => {
-		firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+		firebase.auth.signInWithRedirect(new GoogleAuthProvider());
 	};
 
 	signOut = () => {
 		firebase
-			.auth()
+			.auth
 			.signOut()
 			.then(() => {
 				this.signoutDig.MDComponent.close();

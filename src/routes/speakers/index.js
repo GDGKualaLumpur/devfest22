@@ -84,6 +84,7 @@ export default class Speakers extends Component {
 	}
 
 	render({ rootPath, speakers, info }) {
+		console.log('speakers, info', speakers, info)
 		return (
 			<div>
 				<Dialog
