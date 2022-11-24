@@ -30,25 +30,13 @@ let prerenderJson = [
 		title: 'Speakers - '+siteTitle
 	},
 	{
-		url: '/map',
-		title: 'Event Map - '+siteTitle
-	},
-	{
 		url: '/schedule',
-		title: 'Schedule - '+siteTitle
-	},
-	{
-		url: '/checkin',
 		title: 'Schedule - '+siteTitle
 	},
 	{
 		url: '/sponsor',
 		title: 'Sponsor - '+siteTitle
 	},
-	{
-		url: '/redeem',
-		title: 'Redeem - '+siteTitle
-	}
 ];
 
 const base = 'https://devfest.gdgkl.dev';
