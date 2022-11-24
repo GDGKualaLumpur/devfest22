@@ -1,31 +1,22 @@
-# DevFest 2019 Kuala Lumpur PWA
+# my-project
 
-Progressive Web App for Google DevFest 2019 Kuala Lumpur.
+## CLI Commands
 
-![](https://i.imgur.com/QCyPvdX.jpg)
+``` bash
+# install dependencies
+npm install
 
-## Getting Started
+# serve with hot reload at localhost:8080
+npm run dev
 
-Start development server:
+# build for production with minification
+npm run build
 
-`npm run dev`
+# test the production build locally
+npm run serve
 
-Build:
+# run tests with jest and enzyme
+npm run test
+```
 
-`npm run build`
-
-Deploy:
-
-`firebase deploy`
-
-## Technology Stack
-
-* Preact
-* Firebase (Auth, Realtime Database, Hosting)
-* Service Worker
-
-## License
-
-This PWA is published under the [MIT license](/LICENSE.md).
-
-Feel free to clone and modify repo as you want, but don't forget to add reference to authors.
+For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).

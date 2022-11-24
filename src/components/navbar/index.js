@@ -48,7 +48,7 @@ export default class NavBar extends Component {
 		this.signoutDig.MDComponent.show();
 	};
 
-	render({ rootPath, user }) {
+	render({ rootPath='', user }) {
 		return (
 			<div>
 				<div className={[style.signout_dialog, 'signout_dialog'].join(' ')}>
@@ -84,21 +84,23 @@ export default class NavBar extends Component {
 							</TopAppBar.Section>
 							<div class={style.mobile_title}>
 								<Match path={rootPath + 'schedule'}>
-									{({ path }) =>
-										path.startsWith(rootPath + 'schedule') && (
+									{({path=''}) =>{
+										
+										return path.startsWith(rootPath + 'schedule') && (
 											<span>Schedule</span>
 										)
 									}
+									}
 								</Match>
 								{/* <Match path={rootPath + 'attending'}>
-									{({ path }) =>
+									{({ path='' }) =>
 										path.startsWith(rootPath + 'attending') && (
 											<span>Attending</span>
 										)
 									}
 								</Match> */}
 								<Match path={rootPath + 'speakers'}>
-									{({ path }) =>
+									{({ path='' }) =>
 										path.startsWith(rootPath + 'speakers') && (
 											<span>Speakers</span>
 										)
@@ -137,7 +139,7 @@ export default class NavBar extends Component {
 								Home
 							</Link>
 							{/* <Match path="/attending">
-								{({ path, url }) => (
+								{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'attending'}
@@ -149,7 +151,7 @@ export default class NavBar extends Component {
 								)}
 							</Match> */}
 							<Match path="/registration">
-								{({ path, url }) => (
+								{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'registration'}
@@ -161,7 +163,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/faq">
-								{({ path, url }) => (
+								{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'faq'}
@@ -173,7 +175,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/schedule">
-								{({ path, url }) => (
+								{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'schedule'}
@@ -185,7 +187,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/speakers">
-								{({ path, url }) => (
+								{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'speakers'}
@@ -197,7 +199,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/map">
-								{({ path, url }) => (
+								{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'map'}
@@ -238,7 +240,7 @@ export default class NavBar extends Component {
 							<span>Home</span>
 						</Link>
 						{/* <Match path="/attending">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -251,7 +253,7 @@ export default class NavBar extends Component {
 							)}
 						</Match> */}
 						<Match path="/registration">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -264,7 +266,7 @@ export default class NavBar extends Component {
 							)}
 						</Match>
 						{/* <Match path="/cfp">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -278,7 +280,7 @@ export default class NavBar extends Component {
 							)}
 						</Match> */}
 						<Match path="/faq">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -291,7 +293,7 @@ export default class NavBar extends Component {
 							)}
 						</Match>
 						<Match path="/schedule">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -304,7 +306,7 @@ export default class NavBar extends Component {
 							)}
 						</Match>
 						<Match path="/speakers">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -317,7 +319,7 @@ export default class NavBar extends Component {
 							)}
 						</Match>
 						<Match path="/map">
-							{({ path, url }) => (
+							{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
 										class={style.nav_item}

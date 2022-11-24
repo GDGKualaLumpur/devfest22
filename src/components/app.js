@@ -108,7 +108,8 @@ export default class App extends Component {
 
 				this.setState({ currentUser });
 				if (currentUser) {
-					window.Sentry.configureScope((scope) => {
+
+					window.Sentry && window.Sentry.configureScope((scope) => {
 						scope.setUser({
 							email: currentUser.email,
 							id: currentUser.uid
@@ -123,7 +124,7 @@ export default class App extends Component {
 				}
 				else {
 					
-					window.Sentry.configureScope((scope) => {
+					window.Sentry && window.Sentry.configureScope((scope) => {
 						scope.setUser({});
 					});
 				}
@@ -156,7 +157,7 @@ export default class App extends Component {
 		};
 
 		if (typeof window !== 'undefined') {
-			this.setState({ rootPath: window.GlobalVars.rootPath || '/' });
+			this.setState({ rootPath: '/' });
 			if (window.Sentry) {
 				window.Sentry.init(
 					{ dsn: 'https://910a6b35cb4547c1b26cd72736f9d729@sentry.io/1777367' }
