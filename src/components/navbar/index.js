@@ -198,7 +198,7 @@ export default class NavBar extends Component {
 									</Link>
 								)}
 							</Match>
-							<Match path="/map">
+							{/* <Match path="/map">
 								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
@@ -209,7 +209,7 @@ export default class NavBar extends Component {
 										Map
 									</Link>
 								)}
-							</Match>
+							</Match> */}
 						</div>
 					</Drawer.DrawerContent>
 				</Drawer>
