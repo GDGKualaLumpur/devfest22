@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import IoLogo from '../../components/io_logo';
+import IoLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import style from './style';
@@ -16,7 +16,7 @@ export default class Register extends Component {
 	}
 
 	componentDidMount() {
-		document.title = 'Community Guidelines - DevFest 2019 Kuala Lumpur';
+		document.title = 'Community Guidelines - DevFest 2022 Kuala Lumpur';
 		window.addEventListener('scroll', this.handleScroll, { passive: true });
 		this.handleScroll();
 	}

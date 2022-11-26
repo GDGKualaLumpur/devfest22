@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const builder = require('xmlbuilder');
 
-const siteTitle = 'DevFest 2019 Kuala Lumpur';
+const siteTitle = 'DevFest 2022 Kuala Lumpur';
 
 let prerenderJson = [
 	{
@@ -23,7 +23,7 @@ let prerenderJson = [
 	},
 	// {
 	// 	url: '/faq/communityguidelines',
-	// 	title: 'Community Guidelines - DevFest 2019 Kuala Lumpur'
+	// 	title: 'Community Guidelines - DevFest 2022 Kuala Lumpur'
 	// },
 	{
 		url: '/speakers',
@@ -47,7 +47,7 @@ const getSpeakers = new Promise((resolve) => {
 	// 			let speakers = [];
 	// 			speakers = Object.keys(data).map(item => ({
 	// 				url: `/speakers/${item}`,
-	// 				title: `${data[item].name} - Speakers - DevFest 2019 Kuala Lumpur`
+	// 				title: `${data[item].name} - Speakers - DevFest 2022 Kuala Lumpur`
 	// 			}));
 	// 			resolve(speakers);
 	// 		});
@@ -62,7 +62,7 @@ const getSessions = new Promise((resolve) => {
 	// 			let sessions = [];
 	// 			sessions = Object.keys(data).map(item => ({
 	// 				url: `/schedule/${item}`,
-	// 				title: `${data[item].title} - Schedule - DevFest 2019 Kuala Lumpur`
+	// 				title: `${data[item].title} - Schedule - DevFest 2022 Kuala Lumpur`
 	// 			}));
 	// 			resolve(sessions);
 	// 		});

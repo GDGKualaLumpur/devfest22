@@ -155,6 +155,11 @@ body {
   color: #39c9f4;
 }
 
+#dart {
+  border-color: #469ce8;
+  color: #469ce8;
+}
+
 #android {
   border-color: #9ec351;
   color: #9ec351;
@@ -165,7 +170,7 @@ body {
   color: #00a75d;
 }
 
-#cloud {
+#google_cloud {
   border-color: #1f87e3;
   color: #1f87e3;
 }
@@ -190,7 +195,7 @@ body {
   color: #00a75d;
 }
 
-#machine_learning {
+#machine_learning\/ai {
   border-color: #ffa74d;
   color: #ffa74d;
 }

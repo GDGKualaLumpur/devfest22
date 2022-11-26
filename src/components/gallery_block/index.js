@@ -47,59 +47,59 @@ export default class GalleryBlock extends Component {
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/limhenry/image/upload/v1537072861/devfestkl18_pwa/gallery/1.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465295/devfest19-1_jn1nt6.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/shangyilim/image/upload/c_scale,h_372/v1564582278/IMG_2767.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465295/devfest19-2_p7idyp.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/shangyilim/image/upload/c_scale,w_393/v1564582115/DevFestKL18-6.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465295/devfest19-3_rgdvrc.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/shangyilim/image/upload/c_scale,w_556/v1564582619/Group_Photo_-_1.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465295/devfest19-4_v3psqg.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/shangyilim/image/upload/c_scale,h_363/v1564582756/DSCF1242_1.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465295/devfest19-5_ivccl2.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/limhenry/image/upload/v1537072846/devfestkl18_pwa/gallery/6.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465296/devfest19-6_qlypg3.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/limhenry/image/upload/v1537072883/devfestkl18_pwa/gallery/7.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465296/devfest19-7_mlnk6o.jpg"
         />
         <img
           crossorigin="anonymous"
           class={style.grid_item}
-          data-src="https://res.cloudinary.com/limhenry/image/upload/v1537072866/devfestkl18_pwa/gallery/8.jpg"
+          data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669465296/devfest19-8_akm0ho.jpg"
         />
         <div crossorigin="anonymous" class={style.gallery_info}>
           <div>
-            <h2>DevFest KL 2018 highlights</h2>
+            <h2>DevFest KL 2019 highlights</h2>
             <p>
-              This year's festival built lots of excitement. Check out photos
+              DevFest 2019's festival built lots of excitement. Check out photos
               from featured talks, hands-on learning sessions, and after-hours
               fun.
             </p>
           </div>
-          <a
+          {/* <a
             href="https://photos.app.goo.gl/AfuFKVTzSfxkKZk6A"
             target="_blank"
             rel="noopener noreferrer"
           >
             See all photos
-          </a>
+          </a> */}
         </div>
       </div>
     );

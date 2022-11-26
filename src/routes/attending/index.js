@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import IoLogo from '../../components/io_logo';
+import IoLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import style from './style';

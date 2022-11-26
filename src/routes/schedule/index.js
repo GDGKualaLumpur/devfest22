@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import Dialog from '../../components/dialog';
 import { route } from 'preact-router';
-import IoLogo from '../../components/io_logo';
+import IoLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import 'preact-material-components/Switch/style.css';
@@ -30,7 +30,7 @@ export default class Schedule extends Component {
 	}
 
 	parseTopic(topic) {
-		if(topic === 'css' || topic === 'uiux'){
+		if (topic === 'css' || topic === 'uiux') {
 			return topic.toUpperCase();
 		}
 		topic = topic.replace('_', ' ');
@@ -81,7 +81,7 @@ export default class Schedule extends Component {
 	}
 
 	componentDidMount() {
-		document.title = 'Schedule - DevFest 2019 KL';
+		document.title = 'Schedule - DevFest 2022 KL';
 		window.addEventListener('scroll', this.handleScroll, { passive: true });
 		this.handleScroll();
 	}
@@ -93,7 +93,7 @@ export default class Schedule extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		if (nextProps.id !== this.props.id) {
-			if (nextProps.id &&  nextProps.sessions && nextProps.sessions[nextProps.id]) {
+			if (nextProps.id && nextProps.sessions && nextProps.sessions[nextProps.id]) {
 				this.dialog.toggle(nextProps.id, nextProps.sessions[nextProps.id], 'schedule');
 			}
 			else {
@@ -150,18 +150,18 @@ export default class Schedule extends Component {
 											<div class={style.schedule_event} onClick={this.toggleDialog(item, sessions[item])}>
 												<div class={style.schedule_event_details}>
 													<div class={style.schedule_event_title}>{sessions[item].title}
-													{sessions[item].level && (<div class={style.schedule_event_difficulty}>{sessions[item].level}</div>)}
+														{sessions[item].level && (<div class={style.schedule_event_difficulty}>{sessions[item].level}</div>)}
 													</div>
-													
+
 													<div class={style.schedule_event_meta}>
-													
+
 														<div class={style.schedule_event_lightning}>
-														{sessions[item].lightning && (<div class={style.lightning}><svg viewBox="0 0 512 512" width="16" height="16">
-  <path fill="#ecba16" d="M397.241 176.552H276.303L388.414 0H247.172L114.759 264.828h104.166L114.759 512l282.482-335.448z"/>
-</svg>
-LIGHTING TALK </div>)}
-														{sessions[item].startTime} - {sessions[item].endTime}</div>
-													
+															{sessions[item].lightning && (<div class={style.lightning}><svg viewBox="0 0 512 512" width="16" height="16">
+																<path fill="#ecba16" d="M397.241 176.552H276.303L388.414 0H247.172L114.759 264.828h104.166L114.759 512l282.482-335.448z" />
+															</svg>
+																LIGHTING TALK </div>)}
+															{sessions[item].startTime} - {sessions[item].endTime}</div>
+
 														<div class={style.schedule_event_description}>{sessions[item].duration} / {sessions[item].location}</div>
 														<div class={style.schedule_event_topics}>
 															{sessions[item].topics &&

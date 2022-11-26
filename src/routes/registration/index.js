@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import TicketIcon from '../../components/ticket_icon';
-import IoLogo from '../../components/io_logo';
+import IoLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import RegistrationShape from '../../components/SVG/Shape/RegistrationShape';
@@ -11,7 +11,7 @@ export default class Registration extends Component {
 	state = {
 		registrationStatus: 'opening_soon',
 		registrationStatusText: 'Loading ...',
-		registrationUrl: 'https://ioxkl19.peatix.com/'
+		registrationUrl: 'https://devfest22kl.peatix.com/'
 	};
 
 	handleScroll() {
@@ -48,7 +48,7 @@ export default class Registration extends Component {
 	}
 
 	componentDidMount() {
-		document.title = 'Registration - I/O Extended 2019 Kuala Lumpur';
+		document.title = 'Registration - DevFest 2022 Kuala Lumpur';
 		window.addEventListener('scroll', this.handleScroll, { passive: true });
 		this.handleScroll();
 	}
@@ -111,8 +111,8 @@ export default class Registration extends Component {
 							<div class={style.ticket_content}>
 								<div class={style.ticket_title}>General admission</div>
 								<div class={style.ticket_body}>
-									I/O welcomes anyone who pursues development and tech as a
-									career, side occupation, or hobby.
+									DevFest 2022 KL welcomes anyone who pursues development and tech as a
+									career, side occupation, or hobby. The ticket price is RM30.
 								</div>
 							</div>
 						</div>
