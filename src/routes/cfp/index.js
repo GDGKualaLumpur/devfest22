@@ -15,7 +15,7 @@ export default class CallForPresentersPage extends Component {
 	}
 
 	componentDidMount() {
-		document.title = 'Call for Presenters - DevFest 2019 Kuala Lumpur';
+		document.title = 'Call for Presenters - DevFest 2022 Kuala Lumpur';
 		window.addEventListener('scroll', this.handleScroll, { passive: true });
 		this.handleScroll();
 	}
@@ -28,7 +28,7 @@ export default class CallForPresentersPage extends Component {
 		return (
 			<div>
 				<div class={style.cfp}>
-					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLSSPdRakpp8rG1ZCeMRwzDQ_NEs8K6QnL8_f6JvFtjnLT5g/viewform?embedded=true" width="640" height="2050" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflUMSTx54JTK1ewkJAb3-MyNHYzy7dn-Ymii3MEbzR5-UGXA/viewform?usp=sf_link" width="640" height="2050" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 				</div>
 				<div class={style.footer}>
 					<SocialFooter rootPath={rootPath} />

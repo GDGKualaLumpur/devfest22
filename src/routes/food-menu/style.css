@@ -52,16 +52,19 @@
         margin: 48px 0 0 0;
         padding: 20px;
     }
+
     .faq_item {
         flex-direction: column;
         margin-bottom: 0;
     }
+
     .faq_title {
         width: auto;
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 30px;
     }
+
     .faq_content {
         width: 100%;
         padding-left: 0;

@@ -5,7 +5,7 @@
 }
 
 .tabs .tab {
-    color: #4A4A4A; 
+    color: #4A4A4A;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -29,11 +29,11 @@
     transition: 250ms ease transform;
 }
 
-.tabs .tab:first-child[active] ~ .line {
+.tabs .tab:first-child[active]~.line {
     transform: translateX(0%);
 }
 
-.tabs .tab:nth-child(2)[active] ~ .line {
+.tabs .tab:nth-child(2)[active]~.line {
     transform: translateX(100%);
 }
 
@@ -87,35 +87,44 @@
         padding-top: 64px;
         border-bottom: 1px solid #e6e6e6;
     }
+
     .tabs .tab {
         text-align: center;
         width: 100%;
     }
-    .hero, .belt {
+
+    .hero,
+    .belt {
         display: none;
     }
+
     .attending {
         margin: 8px 0 0 0;
         padding: 20px;
     }
+
     .attending_item {
         flex-direction: column;
         margin-bottom: 48px;
     }
+
     .attending_title {
         width: auto;
         font-size: 20px;
         line-height: 30px;
         margin-bottom: 12px;
     }
+
     .attending_content {
         padding-left: 0;
         width: 95%;
     }
+
     .footer {
         display: none;
     }
 }
+
 @media screen and (max-width: 600px) {
     .tabs {
         padding-top: 56px;

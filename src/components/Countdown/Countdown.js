@@ -2,8 +2,8 @@ import { ANIMATIONS } from './bodymovinAnimationData';
 import { padStart } from 'lodash';
 import lottie from 'lottie-web/build/player/lottie_light_html';
 
-// Google I/O 2019 start time
-const EVENT_DATE = new Date('December 6, 2019 08:00 GMT+8');
+// DevFest 2022 start time
+const EVENT_DATE = new Date('December 3, 2022 10:00 GMT+8');
 
 const FRAME_RANGES = {
 	nine: {
@@ -157,13 +157,13 @@ export class Countdown {
 
 	reset(isReset) {
 		this.digitObjects.forEach(digitObject => {
-		  while (digitObject.element.firstChild) {
+			while (digitObject.element.firstChild) {
 				digitObject.element.removeChild(digitObject.element.firstChild);
-		  }
+			}
 		});
 		this.digitObjects = null;
 		this.isReset = isReset;
-	  }
+	}
 
 	patchBodymovinClasses(classNames) {
 		classNames.forEach(className => {
@@ -320,9 +320,9 @@ export class Countdown {
 	}
 
 	/**
-     * Sets aria label for the countdown container
-     * @param {number} daysLeft the number of days left
-     */
+	 * Sets aria label for the countdown container
+	 * @param {number} daysLeft the number of days left
+	 */
 
 	setAriaLabel(daysLeft) {
 		this.countdownContainer.setAttribute(

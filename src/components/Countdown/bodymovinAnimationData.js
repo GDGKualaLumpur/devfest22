@@ -11406,4 +11406,3 @@ export const ANIMATIONS = {
 		markers: [{ tm: 15, cm: '1', dr: 0 }, { tm: 30, cm: '2', dr: 0 }]
 	}
 };
-  

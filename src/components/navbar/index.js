@@ -10,11 +10,11 @@ import 'preact-material-components/Dialog/style.css';
 import 'preact-material-components/TopAppBar/style.css';
 import 'preact-material-components/Drawer/style.css';
 import 'preact-material-components/List/style.css';
-import IoLogo from '../io_logo';
+import IoLogo from '../devfest_logo';
 import MenuIcon from '../SVG/Icons/menu';
 import HomeIcon from '../SVG/Icons/home';
 // import AttendingIcon from '../SVG/Icons/attending';
- import RegistrationIcon from '../SVG/Icons/registration';
+import RegistrationIcon from '../SVG/Icons/registration';
 import ScheduleIcon from '../SVG/Icons/schedule';
 import SpeakerIcon from '../SVG/Icons/speaker';
 import FaqIcon from '../SVG/Icons/faq';
@@ -48,7 +48,7 @@ export default class NavBar extends Component {
 		this.signoutDig.MDComponent.show();
 	};
 
-	render({ rootPath='', user }) {
+	render({ rootPath = '', user }) {
 		return (
 			<div>
 				<div className={[style.signout_dialog, 'signout_dialog'].join(' ')}>
@@ -84,8 +84,8 @@ export default class NavBar extends Component {
 							</TopAppBar.Section>
 							<div class={style.mobile_title}>
 								<Match path={rootPath + 'schedule'}>
-									{({path=''}) =>{
-										
+									{({ path = '' }) => {
+
 										return path.startsWith(rootPath + 'schedule') && (
 											<span>Schedule</span>
 										)
@@ -100,7 +100,7 @@ export default class NavBar extends Component {
 									}
 								</Match> */}
 								<Match path={rootPath + 'speakers'}>
-									{({ path='' }) =>
+									{({ path = '' }) =>
 										path.startsWith(rootPath + 'speakers') && (
 											<span>Speakers</span>
 										)
@@ -116,7 +116,7 @@ export default class NavBar extends Component {
 									/>
 								) : (
 									<div class={style.signin_btn} onClick={this.toggleSigninDig}>
-											Sign In
+										Sign In
 									</div>
 								)}
 							</TopAppBar.Section>
@@ -127,8 +127,8 @@ export default class NavBar extends Component {
 					<Drawer.DrawerContent>
 						<div class={style.drawer_toolbar}>
 							<IoLogo />
-							<h2>7 December 2019</h2>
-							<p>Asia Pacific University</p>
+							<h2>3 December 2022</h2>
+							<p>Sunway University</p>
 						</div>
 						<div class={style.drawer_nav}>
 							<Link
@@ -151,7 +151,7 @@ export default class NavBar extends Component {
 								)}
 							</Match> */}
 							<Match path="/registration">
-								{({ path='', url }) => (
+								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'registration'}
@@ -163,7 +163,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/faq">
-								{({ path='', url }) => (
+								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'faq'}
@@ -175,7 +175,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/schedule">
-								{({ path='', url }) => (
+								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'schedule'}
@@ -187,7 +187,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/speakers">
-								{({ path='', url }) => (
+								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'speakers'}
@@ -199,7 +199,7 @@ export default class NavBar extends Component {
 								)}
 							</Match>
 							<Match path="/map">
-								{({ path='', url }) => (
+								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
 										href={rootPath + 'map'}
@@ -253,7 +253,7 @@ export default class NavBar extends Component {
 							)}
 						</Match> */}
 						<Match path="/registration">
-							{({ path='', url }) => (
+							{({ path = '', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -280,7 +280,7 @@ export default class NavBar extends Component {
 							)}
 						</Match> */}
 						<Match path="/faq">
-							{({ path='', url }) => (
+							{({ path = '', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -293,7 +293,7 @@ export default class NavBar extends Component {
 							)}
 						</Match>
 						<Match path="/schedule">
-							{({ path='', url }) => (
+							{({ path = '', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -306,7 +306,7 @@ export default class NavBar extends Component {
 							)}
 						</Match>
 						<Match path="/speakers">
-							{({ path='', url }) => (
+							{({ path = '', url }) => (
 								<Link
 									activeClassName={style.active}
 									class={style.nav_item}
@@ -318,7 +318,7 @@ export default class NavBar extends Component {
 								</Link>
 							)}
 						</Match>
-						<Match path="/map">
+						{/* <Match path="/map">
 							{({ path='', url }) => (
 									<Link
 										activeClassName={style.active}
@@ -330,7 +330,7 @@ export default class NavBar extends Component {
 										<span>Map</span>
 									</Link>
 								)}
-						</Match>
+						</Match> */}
 						<div class={style.line} />
 					</nav>
 				</div>

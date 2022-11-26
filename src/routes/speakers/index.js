@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import IoLogo from '../../components/io_logo';
+import IoLogo from '../../components/devfest_logo';
 import Dialog from '../../components/dialog';
 import { route } from 'preact-router';
 import SocialFooter from '../../components/social_footer';
@@ -34,8 +34,8 @@ export default class Speakers extends Component {
 	};
 
 	componentDidMount() {
-		document.title = 'Speakers - DevFest 2019 Kuala Lumpur';
-		if(this.dialog){
+		document.title = 'Speakers - DevFest 2022 Kuala Lumpur';
+		if (this.dialog) {
 			this.dialog.close();
 		}
 	}
@@ -53,11 +53,11 @@ export default class Speakers extends Component {
 		if (nextProps.id !== this.props.id) {
 			if (nextProps.id && nextProps.speakers) {
 				const speaker = nextProps.speakers[nextProps.id];
-				if(!speaker){
-					document.title = 'Speakers - DevFest 2019 Kuala Lumpur';
-					return ;
+				if (!speaker) {
+					document.title = 'Speakers - DevFest 2022 Kuala Lumpur';
+					return;
 				}
-				document.title = `${speaker.name} - Speakers - DevFest 2019 Kuala Lumpur`;
+				document.title = `${speaker.name} - Speakers - DevFest 2022 Kuala Lumpur`;
 				this.dialog.toggle(
 					nextProps.id,
 					speaker,
@@ -65,7 +65,7 @@ export default class Speakers extends Component {
 				);
 			}
 			else {
-				document.title = 'Speakers - DevFest 2019 Kuala Lumpur';
+				document.title = 'Speakers - DevFest 2022 Kuala Lumpur';
 				this.dialog.close();
 			}
 		}
@@ -73,7 +73,7 @@ export default class Speakers extends Component {
 			const speaker = nextProps.speakers[nextProps.id];
 			if (speaker) {
 				this.setState({ toggleDialog: false });
-				document.title = `${speaker.name} - Speakers - DevFest 2019 Kuala Lumpur`;
+				document.title = `${speaker.name} - Speakers - DevFest 2022 Kuala Lumpur`;
 				this.dialog.toggle(
 					nextProps.id,
 					nextProps.speakers[nextProps.id],
@@ -155,7 +155,7 @@ export default class Speakers extends Component {
 						))}
 					</div>
 				)}
-			
+
 				<div class={style.footer}>
 					<SocialFooter rootPath={rootPath} />
 					<Footer rootPath={rootPath} />

@@ -9,7 +9,7 @@
 }
 
 .tabs .tab {
-    color: #4A4A4A; 
+    color: #4A4A4A;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -175,15 +175,18 @@
 .schedule_event:only-child .schedule_event_topics {
     flex-direction: row;
 }
+
 .schedule_event_lightning {
     margin: 0 28px 0 0;
     font-weight: bold;
     font-size: 13px;
 }
+
 .lightning {
     font-size: 10px;
     font-weight: bold;
 }
+
 .slides {
     display: flex;
     margin: 8px 0 0;
@@ -209,7 +212,7 @@
 .schedule_event_difficulty {
     font-size: 12px;
     font-weight: bold;
-    margin: 10,0,0,10;
+    margin: 10, 0, 0, 10;
     color: grey;
 }
 
@@ -217,27 +220,34 @@
     .schedule_events {
         flex-direction: column;
     }
+
     .schedule_event {
         flex-basis: auto;
     }
+
     .schedule_time {
         padding: 30px 0 30px 30px;
         flex: 0 0 160px;
     }
+
     .schedule_event_details {
         display: block;
     }
+
     .schedule_event:only-child .schedule_event_meta,
     .schedule_event_meta {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .schedule_event_title {
         margin-bottom: 0;
     }
+
     .schedule_event_topics {
-        flex-direction: row;    
+        flex-direction: row;
     }
+
     .star_button {
         position: static;
         padding: 12px 0;
@@ -249,34 +259,42 @@
     .hero {
         display: none;
     }
+
     .tabs {
         margin: 0;
         width: 100%;
         padding-top: 64px;
         border-bottom: 1px solid #e6e6e6;
     }
+
     .tabs .tab {
         text-align: center;
         width: 100%;
         border-bottom: 2px solid transparent;
     }
+
     .tabs .tab:hover {
         border-bottom: 2px solid #bcc8fb;
     }
+
     .tabs .tab[active] {
         border-bottom: 2px solid #4768fd;
     }
+
     .myio_info {
         padding: 24px 16px;
         border-top: none;
         border-bottom: 1px solid #e6e6e6;
     }
+
     .schedule {
         margin-top: 0;
     }
+
     .schedule_section:first-child {
         border-top: none;
     }
+
     .schedule_time {
         display: block;
         font-size: 16px;
@@ -288,48 +306,59 @@
         text-align: center;
         flex: 0 0 66px;
     }
+
     .schedule_time span {
         display: block;
         font-size: 11px;
         line-height: 12px;
         margin-left: 0;
     }
+
     .schedule_events {
         display: flex;
         flex-flow: column nowrap;
         flex: 1;
     }
+
     .schedule_event {
-        border: none;   
+        border: none;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         padding: 16px 10px 16px 20px;
         min-height: initial;
     }
+
     .schedule_event:hover {
         background-color: initial;
     }
+
     .schedule_event:focus {
         background-color: #FAFAFA;
     }
+
     .schedule_event_meta {
         flex-direction: column;
     }
+
     .schedule_event:only-child .star_button {
         margin-right: 0;
         padding: 0 12px;
     }
+
     .star_button {
         padding: 8px 12px;
-        margin-right: 0; 
+        margin-right: 0;
     }
+
     .star_button:hover .star {
         fill: #4768FD;
     }
+
     .star_button:hover .star_border {
         fill: #000;
     }
+
     .schedule_event_title {
         color: #202124;
         font-size: 16px;
@@ -337,6 +366,7 @@
         font-weight: 500;
         padding-right: 16px;
     }
+
     .footer {
         display: none;
     }
@@ -346,6 +376,7 @@
     .tabs {
         padding-top: 56px;
     }
+
     .schedule {
         margin-top: 0;
     }

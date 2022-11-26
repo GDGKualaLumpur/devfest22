@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import IoLogo from '../../components/io_logo';
+import DevFestLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import style from './style';
@@ -47,7 +47,7 @@ export default class Attending extends Component {
 
 
 	componentDidMount() {
-		document.title = 'Attending - DevFest 2019 Kuala Lumpur';
+		document.title = 'Attending - DevFest 2022 Kuala Lumpur';
 		this.windowWidth = window.innerWidth;
 		window.addEventListener('scroll', this.handleScroll, { passive: true });
 		window.addEventListener('resize', this.checkResize);
@@ -65,7 +65,7 @@ export default class Attending extends Component {
 		return (
 			<div>
 				<div class={`${style.hero} hero`}>
-					<IoLogo rootPath={rootPath} />
+					<DevFestLogo rootPath={rootPath} />
 					<h2>Attending</h2>
 					<p>Join us at Sunway University as we celebrate product and platform innovations at Google.</p>
 				</div>
@@ -85,15 +85,15 @@ export default class Attending extends Component {
 									<div class={style.attending_title}>Wi-Fi</div>
 									<div class={style.attending_content}>
 										<p><b>Wi-Fi Network:</b>&emsp;<a>{info.wifi_ssid}</a></p>
-										<p><b>Username:</b>&emsp;<a>{info.wifi_username}</a></p>
-										<p><b>Password:</b>&emsp;<a>{info.wifi_password}</a></p>
+										{/* <p><b>Username:</b>&emsp;<a>{info.wifi_username}</a></p>
+										<p><b>Password:</b>&emsp;<a>{info.wifi_password}</a></p> */}
 									</div>
 								</div>
 							}
 							<div class={style.attending_item}>
 								<div class={style.attending_title}>What to expect and explore</div>
 								<div class={style.attending_content}>
-									<p>DevFest 2019 Kuala Lumpur features hands-on learning, Google's latest developer products, and technical talks given by the engineers who are developing our latest APIs and tools–plus a few surprises along the way.</p>
+									<p>DevFest 2022 Kuala Lumpur features hands-on learning, Google's latest developer products, and technical talks given by the engineers who are developing our latest APIs and tools–plus a few surprises along the way.</p>
 									<br />
 									<p><b>Sessions</b></p>
 									<p>Learn Google's latest developer products from Googlers, Google Developer Experts and more.</p>

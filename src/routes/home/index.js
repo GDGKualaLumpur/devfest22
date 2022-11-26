@@ -1,5 +1,5 @@
 import { Component } from "preact";
-import IoLogo from "../../components/io_logo";
+import IoLogo from "../../components/devfest_logo";
 import SocialFooter from "../../components/social_footer";
 import Footer from "../../components/footer";
 import GalleryBlock from "../../components/gallery_block";
@@ -36,7 +36,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    document.title = "DevFest 2019 Kuala Lumpur";
+    document.title = "DevFest 2022 Kuala Lumpur";
     window.addEventListener("scroll", this.handleScroll, { passive: true });
     this.handleScroll();
 
@@ -64,13 +64,13 @@ export default class Home extends Component {
       <div>
         <div class={`${style.hero} hero`}>
           <div class={style.hero_title}>
-            <img src={`assets/devfest-cover.svg`} />
+            <img src={`assets/devfest22-cover.svg`} />
             <h2>
-            DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building and learning about Google’s technologies. 
-            DevFest at its core is powered by a shared belief that when developers come together to exchange ideas, amazing things can happen.
+              DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building and learning about Google’s technologies.
+              DevFest at its core is powered by a shared belief that when developers come together to exchange ideas, amazing things can happen.
             </h2>
             <br />
-            <h4>7 December 2019 · Asia Pacific University</h4>
+            <h4>3 December 2022 · Sunway University</h4>
           </div>
         </div>
         <div class={`${style.belt} belt`}>
@@ -84,14 +84,14 @@ export default class Home extends Component {
           <div class={style.text}>
             <h3>What you need to know, before you ask.</h3>
             <p>
-              DevFest 2019 Kuala Lumpur brings together the world class
-              experts in Android, Web, Machine Learning and Cloud technologies
+              DevFest 2022 Kuala Lumpur brings together the world class
+              experts in Mobile, Web, Machine Learning/AI and Cloud technologies
               for one full day of sessions, workshops and showcases.
             </p>
           </div>
           <div class={style.stats}>
             <div class={style.stat}>
-              <div class={style.number}>800</div>
+              <div class={style.number}>500</div>
               <div class={style.label}>Attendees</div>
             </div>
             <div class={style.stat}>
@@ -100,25 +100,104 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+
         <GalleryBlock />
-        
-          <div class={style.partners}>
-            <h3>Partners</h3>
-            <h4>Main Partner of 2019</h4>
-              <a
-                class={style.item}
-                href="https://www.rhbgroup.com/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  crossorigin="anonymous"
-                  class="sponsor_logo"
-                  data-src="https://res.cloudinary.com/shangyilim/image/upload/v1569938788/devfest19/RHB_1.png"
-                  alt="RHB Bank"
-                />
-              </a>
-              <div class={style.partner}>
+        <br />
+        <br />
+        <div class={style.partners}>
+          <h3>Sponsors</h3>
+          <h4>Gold Sponsors of DevFest 2022 KL</h4>
+          <div class={style.sponsor}>
+            <a
+              class={style.item}
+              href="https://www.gbgplc.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669466925/Loqate_logo_CMYK_kuojfd.png"
+                alt="GBG Malaysia"
+              />
+            </a>
+            <a
+              class={style.item}
+              href="https://www.maxis.com.my/en/home/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669467377/maxis-logo_aw0ksa.png"
+                alt="Maxis"
+              />
+            </a>
+          </div>
+          <h4>Sponsors of DevFest 2022 KL</h4>
+          <div class={style.sponsor}>
+            <a
+              class={style.item}
+              href="https://www.devance.academy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669475273/DA_Primary_Logo_Full_Color_usjfea.png"
+                alt="Devance Academy"
+              />
+            </a>
+          </div>
+          <h4>With Love from</h4>
+          <div class={style.sponsor}>
+            <a
+              class={style.item}
+              href="http://www.google.com.my/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/shangyilim/image/upload/v1569943447/devfest19/google.svg"
+                alt="Google"
+              />
+            </a>
+            <a
+              class={style.item}
+              href="http://www.gdgkl.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/shangyilim/image/upload/v1560263354/gdgkl.png"
+                alt="Google Developer Group KL"
+              />
+            </a>
+            <a
+              class={style.item}
+              href="https://apusds.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669467739/gdsc_sunway_ighzxj.png"
+                alt="Google Developer Student Club Sunway"
+              />
+            </a>
+
+          </div>
+        </div>
+
+
+        {/* <div class={style.partner}>
               <h4>Mind Blowing Partners</h4>
               <div class={style.sponsor}>
              
@@ -193,8 +272,8 @@ export default class Home extends Component {
                 />
               </a>
               </div>
-              </div>
-              <div class={style.partner}>
+              </div> */}
+        {/* <div class={style.partner}>
               <h4>Our Hardcore Fans</h4>
               <div class={style.sponsor}>
               <a
@@ -278,42 +357,11 @@ export default class Home extends Component {
                   data-src="https://res.cloudinary.com/shangyilim/image/upload/v1570193971/devfest19/itrain.png"
                   alt="iTrain Asia"
                 />
-              </a>
-              
-              </div>
-              </div>
-              <div class={style.partner}>
-              <h4>With Love from</h4>
-              <div class={style.sponsor}>
-              <a
-                class={style.item}
-                href="http://www.gdgkl.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  crossorigin="anonymous"
-                  class="sponsor_logo"
-                  data-src="https://res.cloudinary.com/shangyilim/image/upload/v1560263354/gdgkl.png"
-                  alt="Google"
-                />
-              </a>
-              <a
-                class={style.item}
-                href="https://apusds.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  crossorigin="anonymous"
-                  class="sponsor_logo"
-                  data-src="https://res.cloudinary.com/shangyilim/image/upload/v1570194707/devfest19/dsc_apu.png"
-                  alt="Developer Student Club APU"
-                />
-              </a>
-              
-              </div></div>
-            {/* {partners.partner && (
+            </a> */}
+
+
+
+        {/* {partners.partner && (
               <div class={style.partner}>
                 <div class={style.sponsor}>
                   {partners.partner.map(item => (
@@ -445,8 +493,9 @@ export default class Home extends Component {
                 </div>
               </div>
             )} */}
-          </div>
-        
+
+
+
         <SocialFooter rootPath={rootPath} />
         <Footer rootPath={rootPath} />
       </div>

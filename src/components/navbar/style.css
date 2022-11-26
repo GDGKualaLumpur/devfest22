@@ -80,7 +80,7 @@
 .cancel_btn,
 .signout_btn {
   cursor: pointer;
-  color: #527aee!important;
+  color: #527aee !important;
   font-weight: 500;
   background: white;
   border: none;
@@ -93,9 +93,9 @@
 }
 
 .signout_btn {
-  color: #fff!important;
+  color: #fff !important;
   font-weight: 500;
-  background: #1a73e8!important;
+  background: #1a73e8 !important;
 }
 
 .cancel_btn:focus,
@@ -197,7 +197,7 @@
 
 .drawer_nav a.active {
   color: #1a73e8;
-  background-color: rgba(26,115,232,.12);
+  background-color: rgba(26, 115, 232, .12);
   border-top-left-radius: 42px;
   border-bottom-left-radius: 42px;
 }
@@ -313,33 +313,34 @@
   opacity: 0;
 }
 
-.navbar nav .nav_item.active ~ .line {
+.navbar nav .nav_item.active~.line {
   opacity: 1;
 }
 
-.navbar nav .nav_item:first-child.active ~ .line {
+.navbar nav .nav_item:first-child.active~.line {
   transform: translateY(0);
 }
 
-.navbar nav .nav_item:nth-child(2).active ~ .line {
+.navbar nav .nav_item:nth-child(2).active~.line {
   transform: translateY(90px);
 }
 
-.navbar nav .nav_item:nth-child(3).active ~ .line {
+.navbar nav .nav_item:nth-child(3).active~.line {
   transform: translateY(180px);
 }
 
-.navbar nav .nav_item:nth-child(4).active ~ .line {
+.navbar nav .nav_item:nth-child(4).active~.line {
   transform: translateY(270px);
 }
 
-.navbar nav .nav_item:nth-child(5).active ~ .line {
+.navbar nav .nav_item:nth-child(5).active~.line {
   transform: translateY(360px);
 }
 
 .cfpTitle {
   display: block;
 }
+
 .cfpTitleMobile {
   display: none;
 }
@@ -348,6 +349,7 @@
   .dialog_body {
     padding: 16px 28px;
   }
+
   .toolbar {
     display: block;
   }
@@ -410,7 +412,7 @@
   .cfpTitle {
     display: none;
   }
-  
+
   .cfpTitleMobile {
     display: block;
   }
