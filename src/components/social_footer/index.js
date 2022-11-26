@@ -51,7 +51,7 @@ export default class SocialFooter extends Component {
 								</g>
 							</svg>
 						</a>
-						<a href="https://meetup.com/GDGKualaLumpur/" target="_blank" rel="noopener noreferrer">
+						<a href="https://gdg.community.dev/gdg-kuala-lumpur/" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
 								<title>GDG Kuala Lumpur DevFest 2022</title>
 								<circle fill="#1a73e8" cx="20" cy="20" r="20" />
