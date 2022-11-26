@@ -37,7 +37,7 @@ export default class CustomDialog extends Component {
     let star = this.props.star ? !this.props.star[id] : true;
     const ref = this.props.db.ref(
       "users/" + this.props.user.uid + "/schedule/" + id
-  );
+    );
     ref.set(star ? true : null);
   };
 
@@ -76,10 +76,10 @@ export default class CustomDialog extends Component {
   }
 
   parseTopic(topic) {
-    if(topic === 'css' || topic === 'uiux'){
-			return topic.toUpperCase();
+    if (topic === 'css' || topic === 'uiux') {
+      return topic.toUpperCase();
     }
-    
+
     topic = topic.replace("_", " ");
     return topic.charAt(0).toUpperCase() + topic.slice(1);
   }
@@ -154,9 +154,8 @@ export default class CustomDialog extends Component {
                       <Button
                         disabled={this.isFutureOrPassed(data)}
                         raised
-                        className={`mdc-theme--secondary-bg ${
-                          style.askQuestionBtn
-                        } `}
+                        className={`mdc-theme--secondary-bg ${style.askQuestionBtn
+                          } `}
                         onClick={() => {
                           document.location.href = data.slido;
                         }}
@@ -309,21 +308,21 @@ export default class CustomDialog extends Component {
     );
   }
 
-  isFutureOrPassed(data){
+  isFutureOrPassed(data) {
 
     const today = new Date();
-    if(!data.startTime) return ;
+    if (!data.startTime) return;
 
-    const [startHour, startMinute ] = data.startTime.split(/:|AM|PM/);
-    const [endHour, endMinute ] = data.endTime.split(/:|AM|PM/);
+    const [startHour, startMinute] = data.startTime.split(/:|AM|PM/);
+    const [endHour, endMinute] = data.endTime.split(/:|AM|PM/);
 
-    const fullStartHour = data.startTime.includes("PM")? new Number(startHour)+12 : new Number(startHour);
-    const fullEndHour = data.endTime.includes("PM")? new Number(endHour)+12 : new Number(endHour);
-    const hasStarted =  today >= new Date(today.getFullYear(), today.getMonth(), today.getDate(), fullStartHour, startMinute);
+    const fullStartHour = data.startTime.includes("PM") ? new Number(startHour) + 12 : new Number(startHour);
+    const fullEndHour = data.endTime.includes("PM") ? new Number(endHour) + 12 : new Number(endHour);
+    const hasStarted = today >= new Date(today.getFullYear(), today.getMonth(), today.getDate(), fullStartHour, startMinute);
 
     const isOver = today > new Date(today.getFullYear(), today.getMonth(), today.getDate(), fullEndHour, endMinute);
 
     return !hasStarted || isOver;
   }
-  
+
 }

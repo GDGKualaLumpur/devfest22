@@ -24,14 +24,14 @@ export default class EventMapPage extends Component {
 		document.querySelector('.topappbar.mdc-top-app-bar').removeAttribute('top');
 	}
 
-	render({ rootPath, info}) {
+	render({ rootPath, info }) {
 		return (
 			<div class={style.scrollbar}>
-				{info && info.map_image  && info.map_ready && (<img class={style.mapImage} crossorigin="anonymous"  src={info.map_image} />)}
+				{info && info.map_image && info.map_ready && (<img class={style.mapImage} crossorigin="anonymous" src={info.map_image} />)}
 				{info && !info.map_ready && (
-				<div class={`${style.hero} hero`}>
-				<h2>Work in progress</h2></div>)}
-			
+					<div class={`${style.hero} hero`}>
+						<h2>Work in progress</h2></div>)}
+
 				<div class={style.footer}>
 					<SocialFooter rootPath={rootPath} />
 					<Footer rootPath={rootPath} />

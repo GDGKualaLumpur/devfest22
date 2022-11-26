@@ -1,8 +1,8 @@
 import { initializeApp } from 'firebase/app';
 
-import { getAuth,onAuthStateChanged, signInWithRedirect, signOut  } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signInWithRedirect, signOut } from "firebase/auth";
 import { getFirestore, doc, onSnapshot } from "firebase/firestore";
-import { getDatabase, ref,get, onValue } from "firebase/database";
+import { getDatabase, ref, get, onValue } from "firebase/database";
 
 const config = {
   apiKey: "AIzaSyCr2mpyl3Bk_-06f4bgCdntmz_zVzmMPiU",
@@ -15,7 +15,7 @@ const config = {
 };
 const app = initializeApp(config);
 const auth = getAuth(app);
-const firestore  = getFirestore(app);
+const firestore = getFirestore(app);
 const database = getDatabase(app);
 export default {
   app,
@@ -30,12 +30,12 @@ export default {
   },
   database: {
     get: (path) => get(ref(database, path)).then(snapshot => snapshot.val()),
-    once: (path, cb) => onValue(ref(database, path), (snapshot)=>{
+    once: (path, cb) => onValue(ref(database, path), (snapshot) => {
       cb(snapshot.val())
-    },{
+    }, {
       onlyOnce: true
     }),
-    onValue: (path, cb) => onValue(ref(database, path), (snapshot)=>{
+    onValue: (path, cb) => onValue(ref(database, path), (snapshot) => {
       cb(snapshot.val())
     }),
   },

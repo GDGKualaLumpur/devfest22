@@ -56,13 +56,13 @@ export default class App extends Component {
 	componentDidMount() {
 		window.addEventListener('showRefreshSnack', this.showRefreshSnack);
 
-	
-		
+
+
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener('showRefreshSnack', this.showRefreshSnack);
-		if(this.detachSiteInfo){
+		if (this.detachSiteInfo) {
 			this.detachSiteInfo();
 		}
 	}
@@ -72,7 +72,7 @@ export default class App extends Component {
 			this.db = firebase.firestore;
 			this.rtdb = firebase.database;
 
-		
+
 			this.detachSiteInfo = this.rtdb.get("info").then(val => {
 				this.setState({ info: val });
 			});
@@ -93,7 +93,7 @@ export default class App extends Component {
 				this.setState({ speakers: val });
 			});
 
-			this.rtdb.once('sessions',(val) => {
+			this.rtdb.once('sessions', (val) => {
 				this.setState({ sessions: val });
 
 				if (this.id && val[this.id]) {
@@ -101,10 +101,10 @@ export default class App extends Component {
 					this.dialog.toggle(this.id, val[this.id]);
 				}
 			});
-			
-			this.setState({userState: 'logging_in'});
+
+			this.setState({ userState: 'logging_in' });
 			firebase.auth.onAuthStateChanged(currentUser => {
-				this.setState({userState: 'completed_login'});
+				this.setState({ userState: 'completed_login' });
 
 				this.setState({ currentUser });
 				if (currentUser) {
@@ -116,14 +116,14 @@ export default class App extends Component {
 						});
 					});
 
-					
+
 					this.rtdb.onValue(`users/${currentUser.uid}/schedule/`, data => {
 						this.setState({ userSchedule: data });
 					});
-			
+
 				}
 				else {
-					
+
 					window.Sentry && window.Sentry.configureScope((scope) => {
 						scope.setUser({});
 					});
@@ -133,8 +133,8 @@ export default class App extends Component {
 	}
 
 
-	logSentryInfo(message){
-		if(window.Sentry){
+	logSentryInfo(message) {
+		if (window.Sentry) {
 			window.Sentry.captureMessage(message);
 		}
 	}
@@ -247,7 +247,7 @@ export default class App extends Component {
 						path={rootPath}
 						rootPath={rootPath}
 					/>
-					
+
 					<NotFoundPage rootPath={rootPath} default />
 
 				</Router>

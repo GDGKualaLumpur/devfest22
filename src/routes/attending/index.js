@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import IoLogo from '../../components/devfest_logo';
+import DevFestLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import style from './style';
@@ -65,7 +65,7 @@ export default class Attending extends Component {
 		return (
 			<div>
 				<div class={`${style.hero} hero`}>
-					<IoLogo rootPath={rootPath} />
+					<DevFestLogo rootPath={rootPath} />
 					<h2>Attending</h2>
 					<p>Join us at Sunway University as we celebrate product and platform innovations at Google.</p>
 				</div>

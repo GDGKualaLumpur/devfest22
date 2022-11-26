@@ -25,7 +25,7 @@ export default class Footer extends Component {
   componentDidMount() {
     const ele = document.querySelector(`.footer_logo`);
 
-    if (!this.io || !ele ) return;
+    if (!this.io || !ele) return;
 
     this.io.observe(ele);
   }
@@ -40,7 +40,7 @@ export default class Footer extends Component {
       <div class={style.footer}>
         <div class={style.footer_logo}>
           <img
-		  	class="footer_logo"
+            class="footer_logo"
             crossorigin="anonymous"
             alt="GDG Kuala Lumpur Logo"
             data-src="https://res.cloudinary.com/shangyilim/image/upload/v1554985776/new-gdgkl.svg"

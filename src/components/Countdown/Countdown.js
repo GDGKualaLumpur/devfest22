@@ -157,13 +157,13 @@ export class Countdown {
 
 	reset(isReset) {
 		this.digitObjects.forEach(digitObject => {
-		  while (digitObject.element.firstChild) {
+			while (digitObject.element.firstChild) {
 				digitObject.element.removeChild(digitObject.element.firstChild);
-		  }
+			}
 		});
 		this.digitObjects = null;
 		this.isReset = isReset;
-	  }
+	}
 
 	patchBodymovinClasses(classNames) {
 		classNames.forEach(className => {
@@ -320,9 +320,9 @@ export class Countdown {
 	}
 
 	/**
-     * Sets aria label for the countdown container
-     * @param {number} daysLeft the number of days left
-     */
+	 * Sets aria label for the countdown container
+	 * @param {number} daysLeft the number of days left
+	 */
 
 	setAriaLabel(daysLeft) {
 		this.countdownContainer.setAttribute(

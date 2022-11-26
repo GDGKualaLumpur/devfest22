@@ -11,15 +11,15 @@ let prerenderJson = [
 	},
 	{
 		url: '/attending',
-		title: 'Attending - '+siteTitle
+		title: 'Attending - ' + siteTitle
 	},
 	{
 		url: '/registration',
-		title: 'Registration - '+siteTitle
+		title: 'Registration - ' + siteTitle
 	},
 	{
 		url: '/faq',
-		title: 'FAQ - '+siteTitle
+		title: 'FAQ - ' + siteTitle
 	},
 	// {
 	// 	url: '/faq/communityguidelines',
@@ -27,15 +27,15 @@ let prerenderJson = [
 	// },
 	{
 		url: '/speakers',
-		title: 'Speakers - '+siteTitle
+		title: 'Speakers - ' + siteTitle
 	},
 	{
 		url: '/schedule',
-		title: 'Schedule - '+siteTitle
+		title: 'Schedule - ' + siteTitle
 	},
 	{
 		url: '/sponsor',
-		title: 'Sponsor - '+siteTitle
+		title: 'Sponsor - ' + siteTitle
 	},
 ];
 
@@ -72,7 +72,7 @@ const getSessions = new Promise((resolve) => {
 
 Promise.all([getSpeakers, getSessions]).then((values) => {
 	const data = [...prerenderJson, ...values[0], ...values[1]];
-	fs.writeFile('src/prerender-urls.json', JSON.stringify(data, null, 4), () => {});
+	fs.writeFile('src/prerender-urls.json', JSON.stringify(data, null, 4), () => { });
 	const lastMod = new Date().toISOString();
 	let xml = builder.create('urlset', { version: '1.0', encoding: 'UTF-8' });
 	data.forEach(item => {
@@ -85,7 +85,7 @@ Promise.all([getSpeakers, getSessions]).then((values) => {
 			.up();
 	});
 	xml.end({ pretty: true });
-	fs.writeFile('src/sitemap.xml', xml.doc().toString({ pretty: true }), () => {});
+	fs.writeFile('src/sitemap.xml', xml.doc().toString({ pretty: true }), () => { });
 	// eslint-disable-next-line no-console
 	console.log('\x1b[32m%s\x1b[0m', `Pre-render config generated successfully: ${data.length} routes generated.`);
 });

@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import TicketIcon from '../../components/ticket_icon';
-import IoLogo from '../../components/devfest_logo';
+import DevFestLogo from '../../components/devfest_logo';
 import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import RegistrationShape from '../../components/SVG/Shape/RegistrationShape';
@@ -76,7 +76,7 @@ export default class Registration extends Component {
 			<div>
 				<div class={`${style.hero} hero`}>
 					<div class={style.heroText}>
-						<IoLogo rootPath={rootPath} />
+						<DevFestLogo rootPath={rootPath} />
 						{info && (
 							<h2>
 								{info.registration_text} <br />

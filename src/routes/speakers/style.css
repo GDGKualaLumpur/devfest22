@@ -2,6 +2,7 @@
     overflow-x: hidden;
     position: relative;
 }
+
 .speakers {
     margin: 0 60px 64px 60px;
     display: grid;
@@ -9,6 +10,7 @@
     grid-gap: 16px;
     max-width: 1400px;
 }
+
 .speaker_item {
     z-index: 1;
     background: white;
@@ -103,18 +105,22 @@
     .hero {
         display: none;
     }
+
     .speakers {
         grid-gap: 12px;
         padding: 64px 16px 16px 16px;
         margin: 8px 0 0 0;
         grid-template-columns: 1fr;
     }
+
     .speaker_item {
         max-width: 100%;
     }
+
     .short_bio {
         width: 100%;
     }
+
     .footer {
         display: none;
     }
