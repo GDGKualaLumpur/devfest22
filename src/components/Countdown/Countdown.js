@@ -2,8 +2,8 @@ import { ANIMATIONS } from './bodymovinAnimationData';
 import { padStart } from 'lodash';
 import lottie from 'lottie-web/build/player/lottie_light_html';
 
-// Google I/O 2019 start time
-const EVENT_DATE = new Date('December 6, 2019 08:00 GMT+8');
+// DevFest 2022 start time
+const EVENT_DATE = new Date('December 3, 2022 10:00 GMT+8');
 
 const FRAME_RANGES = {
 	nine: {

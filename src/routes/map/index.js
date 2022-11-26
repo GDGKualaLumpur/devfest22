@@ -15,7 +15,7 @@ export default class EventMapPage extends Component {
 	}
 
 	componentDidMount() {
-		document.title = 'Event Map - DevFest 2019 Kuala Lumpur';
+		document.title = 'Event Map - DevFest 2022 Kuala Lumpur';
 		window.addEventListener('scroll', this.handleScroll, { passive: true });
 		this.handleScroll();
 	}

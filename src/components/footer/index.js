@@ -48,7 +48,7 @@ export default class Footer extends Component {
         </div>
         <div class={style.footer_links}>
           <div class={style.footer_link}>
-            <a href="https://devfest.gdgkl.dev/">DevFest 2019 Kuala Lumpur</a>
+            <a href="https://devfest.gdgkl.dev/">DevFest 2022 Kuala Lumpur</a>
             <a href={rootPath + "schedule"}>Schedule</a>
             <a href={rootPath + "speakers"}>Speakers</a>
             <a href={rootPath + "faq"}>FAQ</a>

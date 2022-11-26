@@ -44,8 +44,8 @@ export default class CustomDialog extends Component {
   share = (dataId, data) => e => {
     if (navigator.share) {
       navigator.share({
-        title: "DevFest 2019 Kuala Lumpur",
-        text: `Check out '${data.title}' at #devfestkl19`,
+        title: "DevFest 2022 Kuala Lumpur",
+        text: `Check out '${data.title}' at #devfestkl22`,
         url: `https://devfest.gdgkl.dev/schedule/${dataId}`
       });
     }
