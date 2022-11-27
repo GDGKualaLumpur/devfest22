@@ -108,6 +108,32 @@ export default class Home extends Component {
           <h3>Sponsors</h3>
           <h4>Gold Sponsors of DevFest 2022 KL</h4>
           <div class={style.sponsor}>
+          <a
+              class={style.item}
+              href="http://www.google.com.my/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/shangyilim/image/upload/v1569943447/devfest19/google.svg"
+                alt="Google"
+              />
+            </a>
+            <a
+              class={style.item}
+              href="http://www.google.com.my/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669562650/Sunway_logo-removebg-preview_ik4gnc.png"
+                alt="Sunway University"
+              />
+            </a>
             <a
               class={style.item}
               href="https://www.gbgplc.com/en/"
@@ -119,19 +145,6 @@ export default class Home extends Component {
                 class="sponsor_logo"
                 data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669466925/Loqate_logo_CMYK_kuojfd.png"
                 alt="GBG Malaysia"
-              />
-            </a>
-            <a
-              class={style.item}
-              href="https://www.maxis.com.my/en/home/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                crossorigin="anonymous"
-                class="sponsor_logo"
-                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669467377/maxis-logo_aw0ksa.png"
-                alt="Maxis"
               />
             </a>
           </div>
@@ -153,20 +166,7 @@ export default class Home extends Component {
           </div>
           <h4>With Love from</h4>
           <div class={style.sponsor}>
-            <a
-              class={style.item}
-              href="http://www.google.com.my/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                crossorigin="anonymous"
-                class="sponsor_logo"
-                data-src="https://res.cloudinary.com/shangyilim/image/upload/v1569943447/devfest19/google.svg"
-                alt="Google"
-              />
-            </a>
-            <a
+          <a
               class={style.item}
               href="http://www.gdgkl.dev/"
               target="_blank"
@@ -181,6 +181,20 @@ export default class Home extends Component {
             </a>
             <a
               class={style.item}
+              href="http://www.gdgkl.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                crossorigin="anonymous"
+                class="sponsor_logo"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669589796/wtmkl_jx9gcn.png"
+                alt="WTM KL"
+              />
+            </a>
+            
+            <a
+              class={style.item}
               href="https://apusds.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -188,8 +202,8 @@ export default class Home extends Component {
               <img
                 crossorigin="anonymous"
                 class="sponsor_logo"
-                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669467739/gdsc_sunway_ighzxj.png"
-                alt="Google Developer Student Club Sunway"
+                data-src="https://res.cloudinary.com/dzaaefrwa/image/upload/v1669562490/STC_nmfxzr.png"
+                alt="Sunway STC"
               />
             </a>
 

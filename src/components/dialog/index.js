@@ -5,6 +5,7 @@ import "preact-material-components/Dialog/style.css";
 import Button from "preact-material-components/Button";
 import "preact-material-components/Button/style.css";
 import "preact-material-components/Theme/style.css";
+import { getDatabase, ref, set } from "firebase/database";
 
 import style from "./style";
 
@@ -34,11 +35,11 @@ export default class CustomDialog extends Component {
   };
 
   star = id => e => {
-    let star = this.props.star ? !this.props.star[id] : true;
-    const ref = this.props.db.ref(
-      "users/" + this.props.user.uid + "/schedule/" + id
-    );
-    ref.set(star ? true : null);
+    let star1 = this.props.star ? !this.props.star[id] : true;
+		const db = getDatabase();
+		set(ref(db, 'users/' + this.props.user.uid + '/schedule/' + id), {
+			star: star1 ? true : null,
+		  });
   };
 
   share = (dataId, data) => e => {
