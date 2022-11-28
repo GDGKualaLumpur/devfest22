@@ -6,6 +6,7 @@ import SocialFooter from '../../components/social_footer';
 import Footer from '../../components/footer';
 import 'preact-material-components/Switch/style.css';
 import style from './style';
+import { getDatabase, ref, set } from "firebase/database";
 
 export default class Schedule extends Component {
 	state = {
@@ -24,9 +25,11 @@ export default class Schedule extends Component {
 	}
 
 	star = (id) => e => {
-		let star = this.props.userSchedule ? !this.props.userSchedule[id] : true;
-		const ref = this.props.db.ref('users/' + this.props.user.uid + '/schedule/' + id);
-		ref.set(star ? true : null);
+		let star1 = this.props.userSchedule ? !this.props.userSchedule[id] : true;
+		const db = getDatabase();
+		set(ref(db, 'users/' + this.props.user.uid + '/schedule/' + id), {
+			star: star1 ? true : null,
+		  });
 	}
 
 	parseTopic(topic) {

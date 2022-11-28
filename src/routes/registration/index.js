@@ -113,6 +113,7 @@ export default class Registration extends Component {
 								<div class={style.ticket_body}>
 									DevFest 2022 KL welcomes anyone who pursues development and tech as a
 									career, side occupation, or hobby. The ticket price is RM30.
+									Grab your spot NOW at DevFest 2022 KL from our peatix <a href="https://devfest22kl.peatix.com/" target="_blank">event page</a>!!
 								</div>
 							</div>
 						</div>

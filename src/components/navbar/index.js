@@ -20,6 +20,7 @@ import SpeakerIcon from '../SVG/Icons/speaker';
 import FaqIcon from '../SVG/Icons/faq';
 import MapIcon from '../SVG/Icons/map';
 import style from './style';
+import { getAuth, signOut } from "firebase/auth";
 
 export default class NavBar extends Component {
 	closeDrawer = () => this.setState({ drawerOpened: false });
@@ -31,13 +32,11 @@ export default class NavBar extends Component {
 	};
 
 	signOut = () => {
-		firebase
-			.auth
-			.signOut()
-			.then(() => {
-				this.signoutDig.MDComponent.close();
-				window.location.reload();
-			});
+		const auth = getAuth();
+		signOut(auth).then(() => {
+			this.signoutDig.MDComponent.close();
+			window.location.reload();
+		});
 	};
 
 	toggleSigninDig = () => {
@@ -198,7 +197,7 @@ export default class NavBar extends Component {
 									</Link>
 								)}
 							</Match>
-							<Match path="/map">
+							{/* <Match path="/map">
 								{({ path = '', url }) => (
 									<Link
 										activeClassName={style.active}
@@ -209,7 +208,7 @@ export default class NavBar extends Component {
 										Map
 									</Link>
 								)}
-							</Match>
+							</Match> */}
 						</div>
 					</Drawer.DrawerContent>
 				</Drawer>

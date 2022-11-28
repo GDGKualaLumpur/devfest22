@@ -12,6 +12,7 @@ import Schedule from 'async!../routes/schedule';
 import Speakers from 'async!../routes/speakers';
 import Snackbar from 'preact-material-components/Snackbar';
 import 'preact-material-components/Snackbar/style.css';
+import { getDatabase, ref, set } from "firebase/database";
 
 export default class App extends Component {
 	handleRoute = e => {
@@ -84,7 +85,7 @@ export default class App extends Component {
 			this.rtdb.once('schedule', (val) => {
 				this.setState({ schedule: val });
 			});
-
+			
 			this.rtdb.get('userSchedule').then(val => {
 				this.setState({ userSchedule: val });
 			});
@@ -115,12 +116,11 @@ export default class App extends Component {
 							id: currentUser.uid
 						});
 					});
-
-
-					this.rtdb.onValue(`users/${currentUser.uid}/schedule/`, data => {
+					
+					this.rtdb.onValue('users/'+currentUser.uid+'/schedule', data => {
 						this.setState({ userSchedule: data });
 					});
-
+					
 				}
 				else {
 
