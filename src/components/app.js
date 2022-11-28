@@ -86,10 +86,6 @@ export default class App extends Component {
 				this.setState({ schedule: val });
 			});
 			
-			this.rtdb.get('userSchedule').then(val => {
-				this.setState({ userSchedule: val });
-			});
-
 			this.rtdb.once('speakers', (val) => {
 				this.setState({ speakers: val });
 			});
